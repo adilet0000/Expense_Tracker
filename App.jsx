@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ExpenseProvider } from './src/context/ExpenseContext';
 import HomeScreen from './src/screens/homeScreen/HomeScreen';
-import AddExpenseScreen from './src/screens/addExpenseScreen/AddExpenseScreen';
+import HistoryScreen from './src/screens/historyScreen/HistoryScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,8 +12,8 @@ const App = () => {
       <ExpenseProvider>
          <NavigationContainer>
             <Stack.Navigator>
-               <Stack.Screen name="Home" component={HomeScreen} />
-               <Stack.Screen name="AddExpense" component={AddExpenseScreen} />
+               <Stack.Screen name="Главная" component={HomeScreen} />
+               <Stack.Screen name="История" component={HistoryScreen} />
             </Stack.Navigator>
          </NavigationContainer>
       </ExpenseProvider>
